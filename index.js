@@ -151,7 +151,15 @@ function renderQuestion() {
             <div class="float_form"><input type="radio" name="cau13">15</div>
             <div class="float_form"><input type="radio" name="cau13">6</div>
             <div><input type="radio" name="cau13">16</div>
-           
+
+            <h1>THỰC HÀNH:</h2>
+            <h2>1. Viết một function đảo ngược một string bất kỳ, sử dụng các phương thức của array.
+            <p>
+            Input: "abcdef"<br>
+            Ouput: "fedcba"
+            </p>
+            <p>
+        
         </form>
         
     </div>
@@ -173,3 +181,19 @@ function showUserResults() {
     document.getElementById("btn").style.backgroundColor = "gray"
 
 }
+
+// PRACTIC
+// 1. REVERSE() STRING.
+function reverseString(inputString) {
+    console.log(inputString)
+    let str = inputString
+    let str2 = str.split("")
+    str2.reverse()
+    console.log(str2)
+    let strRev = str2.join("")
+    console.log(strRev)
+    document.write(`Check input and output in console: `)
+    document.write(`Input: ${str} Output: ${strRev}`)
+
+}
+reverseString("abcdef")
