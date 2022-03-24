@@ -4,7 +4,7 @@ function renderQuestion() {
     mainPage.innerHTML += `
     <div id="mainPage">
         <button id="btn" class="btn-show-hide" onclick="showUserResults()">Show user results</button>
-        <form action="" method="post">
+        <form action="" method="">
             <h2>Câu 1: var khai báo một biến có phạm vi trong block?
             </h2>
             <div class="float_form"><input type="radio" name="cau1">True</div>
@@ -159,9 +159,15 @@ function renderQuestion() {
             Ouput: "fedcba"
             </p>
             <p>
-        
+            
+            <div>Input  <input type="text" id="input" placeholder="Input string"></div>
+            <button onclick="reverseString(str1)">Reverse String</button>
+            <div>Output:</div>
+            
         </form>
-        
+            
+    
+            
     </div>
     `
 }
@@ -170,30 +176,27 @@ renderQuestion()
 // FUNCTION SHOW USER RESULT
 function showUserResults() {
     function toggle(className, displayState){
-        var elements = document.getElementsByClassName(className)
+    var elements = document.getElementsByClassName(className)
     
-        for (var i = 0; i < elements.length; i++){
-            elements[i].style.display = displayState;
+    for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = displayState;
         }
     }
     // toggle('float_form', 'block'); // Shows
     toggle('float_form', 'none'); // hides
     document.getElementById("btn").style.backgroundColor = "gray"
-
+    
 }
 
 // PRACTIC
 // 1. REVERSE() STRING.
+var str1 = "abcdef"
 function reverseString(inputString) {
-    console.log(inputString)
-    let str = inputString
-    let str2 = str.split("")
+    let str2 = inputString.split("")
     str2.reverse()
     console.log(str2)
     let strRev = str2.join("")
     console.log(strRev)
-    document.write(`Check input and output in console: `)
-    document.write(`Input: ${str} Output: ${strRev}`)
-
+    alert(`Input: ${inputString} Output: ${strRev}`)
 }
-reverseString("abcdef")
+
